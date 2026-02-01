@@ -4,6 +4,8 @@ services:
   db:
     image: mysql:8.0
     container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     networks:
