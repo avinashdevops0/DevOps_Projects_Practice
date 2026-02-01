@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'nonocodes', url: 'https://github.com/avinashdevops0/DevOps_Projects_Practice.git'
+        git branch: 'monocodes', url: 'https://github.com/avinashdevops0/DevOps_Projects_Practice.git'
       }
     }
 
