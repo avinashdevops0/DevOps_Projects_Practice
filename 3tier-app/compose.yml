@@ -3,7 +3,6 @@ version: "3.9"
 services:
   db:
     image: mysql:8.0
-    # container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
@@ -13,7 +12,6 @@ services:
 
   backend:
     build: ./backend
-    # container_name: backend-api
     environment:
       environment:
       DB_HOST: ${DB_HOST}
@@ -28,7 +26,6 @@ services:
 
   frontend:
     build: ./frontend
-    # container_name: frontend-ui
     ports:
       - "8000:80"
     depends_on:
