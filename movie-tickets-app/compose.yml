@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   db:
-    image: mysql:8
+    build: ./database
     restart: always
     # environment:
     #   MYSQL_ROOT_PASSWORD: rootpassword
@@ -29,7 +29,7 @@ services:
     build: ./frontend
     restart: always
     ports:
-      - "8000:8080"
+      - "80:80"
     networks:
       - movie-net
 
