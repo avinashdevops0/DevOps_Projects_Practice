@@ -19,7 +19,7 @@ services:
       DB_HOST: db
       DB_USER: root
       DB_PASSWORD: rootpassword
-      DB_NAME: movies_db
+      DB_NAME: movie_tickets_db
     depends_on:
       - db
     networks:
