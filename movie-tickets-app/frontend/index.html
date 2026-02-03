@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 MovieMagic Tickets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-film"></i> MovieMagic Tickets</h1>
+            <p class="tagline">Your gateway to cinematic adventures</p>
+        </header>
+
+        <main>
+            <section class="movies-section" id="moviesSection">
+                <h2><i class="fas fa-star"></i> Now Showing</h2>
+                <div class="movies-grid" id="moviesGrid">
+                    <!-- Movies will be loaded here -->
+                </div>
+            </section>
+
+            <section class="booking-section" id="bookingSection" style="display: none;">
+                <h2 id="bookingTitle">Book Tickets</h2>
+                <div class="booking-form" id="bookingForm">
+                    <!-- Booking form will be loaded here -->
+                </div>
+                <button class="back-btn" onclick="showMovies()">
+                    <i class="fas fa-arrow-left"></i> Back to Movies
+                </button>
+            </section>
+
+            <section class="confirmation-section" id="confirmationSection" style="display: none;">
+                <div class="confirmation-card">
+                    <div class="confirmation-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Booking Confirmed!</h2>
+                    </div>
+                    <div id="confirmationDetails">
+                        <!-- Booking details will be shown here -->
+                    </div>
+                    <button class="btn-primary" onclick="showMovies()">
+                        Book More Tickets <i class="fas fa-ticket-alt"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 MovieMagic Tickets. Lights, camera, action!</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-phone"></i> Contact</a>
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
