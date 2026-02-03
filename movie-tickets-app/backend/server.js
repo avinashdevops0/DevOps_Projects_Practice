@@ -74,45 +74,46 @@ app.get('/api/showtimes/today', async (req, res) => {
 // Create booking
 app.post('/api/bookings', async (req, res) => {
     const { showtime_id, customer_name, customer_email, seats } = req.body;
-    
+
+    const connection = await db.getConnection();
     try {
         // Start transaction
-        await db.execute('START TRANSACTION');
-        
+        await connection.execute('START TRANSACTION');
+
         // Get showtime details
-        const [showtimes] = await db.execute(
+        const [showtimes] = await connection.execute(
             'SELECT s.*, m.price FROM showtimes s JOIN movies m ON s.movie_id = m.id WHERE s.id = ? FOR UPDATE',
             [showtime_id]
         );
-        
+
         if (showtimes.length === 0) {
             throw new Error('Showtime not found');
         }
-        
+
         const showtime = showtimes[0];
-        
+
         // Check available seats
         if (showtime.available_seats < seats) {
             throw new Error('Not enough seats available');
         }
-        
+
         // Calculate total price
         const total_price = showtime.price * seats;
-        
+
         // Create booking
-        const [result] = await db.execute(
+        const [result] = await connection.execute(
             'INSERT INTO bookings (showtime_id, customer_name, customer_email, seats, total_price) VALUES (?, ?, ?, ?, ?)',
             [showtime_id, customer_name, customer_email, seats, total_price]
         );
-        
+
         // Update available seats
-        await db.execute(
+        await connection.execute(
             'UPDATE showtimes SET available_seats = available_seats - ? WHERE id = ?',
             [seats, showtime_id]
         );
-        
-        await db.execute('COMMIT');
-        
+
+        await connection.execute('COMMIT');
+
         res.json({
             success: true,
             booking_id: result.insertId,
@@ -120,11 +121,13 @@ app.post('/api/bookings', async (req, res) => {
             message: 'Booking successful!'
         });
     } catch (error) {
-        await db.execute('ROLLBACK');
-        res.status(400).json({ 
-            success: false, 
-            error: error.message 
+        await connection.execute('ROLLBACK');
+        res.status(400).json({
+            success: false,
+            error: error.message
         });
+    } finally {
+        connection.release();
     }
 });
 
