@@ -3,57 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 MovieMagic Tickets</title>
+    <title>🍿 MovieMagic Tickets</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-film"></i> MovieMagic Tickets</h1>
-            <p class="tagline">Your gateway to cinematic adventures</p>
+            <div class="header-content">
+                <h1><i class="fas fa-film"></i> MovieMagic Tickets</h1>
+                <p class="tagline">Book your cinematic experience in seconds</p>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <i class="fas fa-circle"></i>
+                <span>Connecting...</span>
+            </div>
         </header>
 
         <main>
+            <!-- Loading Screen -->
+            <div class="loading-screen" id="loadingScreen">
+                <div class="spinner"></div>
+                <p>Loading movies...</p>
+            </div>
+
+            <!-- Movies Section -->
             <section class="movies-section" id="moviesSection">
                 <h2><i class="fas fa-star"></i> Now Showing</h2>
                 <div class="movies-grid" id="moviesGrid">
-                    <!-- Movies will be loaded here -->
+                    <!-- Movies loaded here -->
                 </div>
             </section>
 
+            <!-- Booking Section -->
             <section class="booking-section" id="bookingSection" style="display: none;">
-                <h2 id="bookingTitle">Book Tickets</h2>
-                <div class="booking-form" id="bookingForm">
-                    <!-- Booking form will be loaded here -->
+                <div class="booking-header">
+                    <h2 id="bookingTitle">Book Tickets</h2>
+                    <button class="btn-secondary" onclick="goBackToMovies()">
+                        <i class="fas fa-arrow-left"></i> Back to Movies
+                    </button>
                 </div>
-                <button class="back-btn" onclick="showMovies()">
-                    <i class="fas fa-arrow-left"></i> Back to Movies
-                </button>
+                <div class="booking-content">
+                    <div class="movie-detail-card" id="movieDetailCard"></div>
+                    <div class="booking-form-container">
+                        <div class="booking-steps">
+                            <div class="step active" id="step1">
+                                <span class="step-number">1</span>
+                                <span class="step-label">Select Showtime</span>
+                            </div>
+                            <div class="step" id="step2">
+                                <span class="step-number">2</span>
+                                <span class="step-label">Your Details</span>
+                            </div>
+                            <div class="step" id="step3">
+                                <span class="step-number">3</span>
+                                <span class="step-label">Confirmation</span>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-form" id="bookingForm">
+                            <!-- Form loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <!-- Confirmation Section -->
             <section class="confirmation-section" id="confirmationSection" style="display: none;">
                 <div class="confirmation-card">
-                    <div class="confirmation-header">
+                    <div class="confirmation-icon">
                         <i class="fas fa-check-circle"></i>
-                        <h2>Booking Confirmed!</h2>
                     </div>
-                    <div id="confirmationDetails">
-                        <!-- Booking details will be shown here -->
+                    <h2>Booking Confirmed!</h2>
+                    <p>Your tickets have been reserved successfully.</p>
+                    
+                    <div class="confirmation-details" id="confirmationDetails">
+                        <!-- Booking details loaded here -->
                     </div>
-                    <button class="btn-primary" onclick="showMovies()">
-                        Book More Tickets <i class="fas fa-ticket-alt"></i>
-                    </button>
+                    
+                    <div class="confirmation-actions">
+                        <button class="btn-primary" onclick="goBackToMovies()">
+                            <i class="fas fa-film"></i> Browse More Movies
+                        </button>
+                        <button class="btn-secondary" onclick="printConfirmation()">
+                            <i class="fas fa-print"></i> Print Confirmation
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>© 2024 MovieMagic Tickets. Lights, camera, action!</p>
-            <div class="footer-links">
-                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
-                <a href="#"><i class="fas fa-phone"></i> Contact</a>
-                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3><i class="fas fa-ticket-alt"></i> MovieMagic Tickets</h3>
+                    <p>Experience the magic of cinema</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                    <a href="#"><i class="fas fa-phone"></i> Contact Us</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2024 MovieMagic Tickets. All rights reserved.</p>
+                </div>
             </div>
         </footer>
     </div>

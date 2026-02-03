@@ -1,0 +1,29 @@
+pipeline {
+    agent any 
+    stages {
+        stage ("Clean WorkSpace") {
+            steps {
+                cleanWs()
+            }
+        }
+        stage ("Code") {
+            steps {
+                git branch: 'monocodes', url: 'https://github.com/avinashdevops0/DevOps_Projects_Practice.git'
+            }
+        }
+        stage ("Build") {
+            steps {
+                dir("movie-tickets-app") {
+                    sh "docker-compose build --no-cache"
+                }
+            }
+        }
+        stage ("Running Containers") {
+            steps {
+                dir("movie-tickets-app") {
+                    sh "docker-compose up -d"
+                }
+            }
+        }
+    }
+}
