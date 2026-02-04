@@ -1,0 +1,39 @@
+pipeline {
+    agent any 
+    environment {
+        MYSQL_ROOT_PASSWORD = credentails('mysq-root-password')
+        MYSQL_USER          = credentails('mysq-user')
+        MYSQL_PASSWORD      = credentails('mysq-user-password')
+    }
+    stages {
+        stage ("Clean workspace") {
+            steps {
+                cleanWs()
+            }
+        }
+        stage ("Code") {
+            steps {
+                git branch: 'monocodes',url: ''
+            }
+        }
+        stage ("Build") {
+            steps {
+                dir("task-manager") {
+                    sh "docker-compose build --no-cache"
+                }
+            }
+        }
+        // stage ("Pusing to ECS") {
+        //     steps {
+
+        //     }
+        // }
+        stage ("Deploy") {
+            steps {
+                dir("task-manager") {
+                    sh "docker-compose up -d"
+                }
+            }
+        }
+    }
+}

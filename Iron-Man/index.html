@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Industries | Iron Man Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦾</text></svg>">
+</head>
+<body>
+    <!-- Futuristic Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-container">
+            <div class="arc-reactor-pulse"></div>
+            <div class="loading-text">
+                <span class="loading-char">I</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">T</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">A</span>
+                <span class="loading-char">L</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">Z</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">G</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-glow"></div>
+                <span class="logo-text">STARK<span class="logo-accent">INDUSTRIES</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Tony Stark</a>
+                <a href="#suits" class="nav-link">Suit Gallery</a>
+                <a href="#powers" class="nav-link">Technology</a>
+                <a href="#team" class="nav-link">Avengers</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-container" id="hero3d">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">
+                        <span class="subtitle-glow">PROTECTOR OF EARTH</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">I AM</span>
+                        <span class="title-line highlight">IRON MAN</span>
+                    </h1>
+                    <p class="hero-description">
+                        Genius. Billionaire. Philanthropist. The armor is just a tool for a greater purpose.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="heroBtn">
+                            <span class="btn-text">ACTIVATE SUIT</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <span class="btn-text">STARK INDUSTRIES</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="iron-man-model" id="ironManModel">
+                        <div class="helmet-container">
+                            <div class="helmet-glow"></div>
+                            <div class="helmet"></div>
+                        </div>
+                        <div class="arc-reactor" id="arcReactor">
+                            <div class="reactor-core"></div>
+                            <div class="reactor-ring reactor-ring-1"></div>
+                            <div class="reactor-ring reactor-ring-2"></div>
+                            <div class="reactor-ring reactor-ring-3"></div>
+                            <div class="reactor-glow"></div>
+                        </div>
+                        <div class="hud-element hud-1"></div>
+                        <div class="hud-element hud-2"></div>
+                        <div class="hud-element hud-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator"></div>
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Tony Stark -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    TONY STARK
+                </h2>
+                <p class="section-subtitle">The man inside the armor</p>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="card-3d" id="card1">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="card-title">GENIUS INTELLECT</h3>
+                            <p class="card-text">Tony Stark possesses one of the most brilliant minds on Earth, with expertise in robotics, AI, engineering, and theoretical physics.</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">IQ LEVEL</h3>
+                            <div class="card-stat">
+                                <span class="stat-value">270+</span>
+                                <span class="stat-label">SUPERGENIUS</span>
+                            </div>
+                            <div class="card-list">
+                                <div class="list-item">• 7 PhDs</div>
+                                <div class="list-item">• MIT at 15</div>
+                                <div class="list-item">• Created J.A.R.V.I.S.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-3d" id="card2">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 class="card-title">STARK INDUSTRIES</h3>
+                            <p class="card-text">CEO of the world's leading tech conglomerate, revolutionizing energy, defense, and medical technology while advocating for clean energy.</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">NET WORTH</h3>
+                            <div class="card-stat">
+                                <span class="stat-value">$12.4B</span>
+                                <span class="stat-label">FORBES RANK #7</span>
+                            </div>
+                            <div class="card-list">
+                                <div class="list-item">• Global operations</div>
+                                <div class="list-item">• Clean energy focus</div>
+                                <div class="list-item">• 250,000+ employees</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-3d" id="card3">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="card-title">ARC REACTOR</h3>
+                            <p class="card-text">The miniaturized arc reactor keeps shrapnel from his heart and powers the Iron Man suits, representing his will to survive and protect.</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="card-title">POWER OUTPUT</h3>
+                            <div class="card-stat">
+                                <span class="stat-value">8 GIGAWATTS</span>
+                                <span class="stat-label">CLEAN ENERGY</span>
+                            </div>
+                            <div class="card-list">
+                                <div class="list-item">• Palladium core</div>
+                                <div class="list-item">• Self-sustaining</div>
+                                <div class="list-item">• Zero emissions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-title">FROM WEAPONS MANUFACTURER TO EARTH'S DEFENDER</h3>
+                    <p class="about-paragraph">
+                        Anthony Edward "Tony" Stark transformed from an egotistical weapons manufacturer to a selfless hero determined to protect the world. His experiences in captivity led to the creation of the first Iron Man suit, marking the beginning of a new era of heroism.
+                    </p>
+                    <p class="about-paragraph">
+                        Stark's journey represents the power of redemption and technological innovation for the greater good. His legacy extends beyond the armor, inspiring a new generation of heroes and proving that anyone can change their path.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Iron Man Suits</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Avengers Missions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Sacrifices for Humanity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suit Gallery -->
+    <section class="suits-section" id="suits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02</span>
+                    ARMOR GALLERY
+                </h2>
+                <p class="section-subtitle">Evolution of the Iron Man suits</p>
+            </div>
+            <div class="suits-grid">
+                <div class="suit-card" data-suit="mark1">
+                    <div class="suit-card-inner">
+                        <div class="suit-card-front">
+                            <div class="suit-image suit-1"></div>
+                            <div class="suit-info">
+                                <h3 class="suit-name">MARK I</h3>
+                                <div class="suit-year">2008</div>
+                                <div class="suit-tag">ORIGINAL</div>
+                            </div>
+                            <div class="suit-glow"></div>
+                        </div>
+                        <div class="suit-card-back">
+                            <h3 class="suit-specs-title">MARK I SPECS</h3>
+                            <ul class="suit-specs">
+                                <li>• Built in a cave</li>
+                                <li>• Jet boots limited</li>
+                                <li>• Flamethrower equipped</li>
+                                <li>• Steel alloy armor</li>
+                                <li>• Arc reactor v1.0</li>
+                            </ul>
+                            <button class="suit-details-btn">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="suit-card" data-suit="mark3">
+                    <div class="suit-card-inner">
+                        <div class="suit-card-front">
+                            <div class="suit-image suit-2"></div>
+                            <div class="suit-info">
+                                <h3 class="suit-name">MARK III</h3>
+                                <div class="suit-year">2008</div>
+                                <div class="suit-tag">CLASSIC</div>
+                            </div>
+                            <div class="suit-glow"></div>
+                        </div>
+                        <div class="suit-card-back">
+                            <h3 class="suit-specs-title">MARK III SPECS</h3>
+                            <ul class="suit-specs">
+                                <li>• Gold-titanium alloy</li>
+                                <li>• Flight capable</li>
+                                <li>• Repulsor beams</li>
+                                <li>• J.A.R.V.I.S. integrated</li>
+                                <li>• First red/gold design</li>
+                            </ul>
+                            <button class="suit-details-btn">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="suit-card" data-suit="mark7">
+                    <div class="suit-card-inner">
+                        <div class="suit-card-front">
+                            <div class="suit-image suit-3"></div>
+                            <div class="suit-info">
+                                <h3 class="suit-name">MARK VII</h3>
+                                <div class="suit-year">2012</div>
+                                <div class="suit-tag">AVENGERS</div>
+                            </div>
+                            <div class="suit-glow"></div>
+                        </div>
+                        <div class="suit-card-back">
+                            <h3 class="suit-specs-title">MARK VII SPECS</h3>
+                            <ul class="suit-specs">
+                                <li>• Autonomous assembly</li>
+                                <li>• Laser cutting system</li>
+                                <li>• Enhanced thrusters</li>
+                                <li>• Missile array</li>
+                                <li>• Space capable</li>
+                            </ul>
+                            <button class="suit-details-btn">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="suit-card" data-suit="mark50">
+                    <div class="suit-card-inner">
+                        <div class="suit-card-front">
+                            <div class="suit-image suit-4"></div>
+                            <div class="suit-info">
+                                <h3 class="suit-name">MARK L</h3>
+                                <div class="suit-year">2018</div>
+                                <div class="suit-tag">NANOTECH</div>
+                            </div>
+                            <div class="suit-glow"></div>
+                        </div>
+                        <div class="suit-card-back">
+                            <h3 class="suit-specs-title">MARK L SPECS</h3>
+                            <ul class="suit-specs">
+                                <li>• Nanotechnology</li>
+                                <li>• Instant deployment</li>
+                                <li>• Shape-shifting</li>
+                                <li>• Energy shields</li>
+                                <li>• Unlimited configurations</li>
+                            </ul>
+                            <button class="suit-details-btn">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powers & Technology -->
+    <section class="powers-section" id="powers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03</span>
+                    TECHNOLOGY
+                </h2>
+                <p class="section-subtitle">Iron Man's capabilities and systems</p>
+            </div>
+            <div class="powers-content">
+                <div class="power-stats">
+                    <div class="stat-panel">
+                        <div class="stat-header">
+                            <h3 class="stat-title">REPULSOR TECHNOLOGY</h3>
+                            <div class="stat-value">100%</div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" data-progress="100"></div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <p class="stat-desc">Particle beam weapons integrated into gloves, capable of energy projection, flight stabilization, and concussive force.</p>
+                    </div>
+                    <div class="stat-panel">
+                        <div class="stat-header">
+                            <h3 class="stat-title">UNIBEAM</h3>
+                            <div class="stat-value">95%</div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" data-progress="95"></div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <p class="stat-desc">Chest-mounted arc reactor projector delivering a powerful concussive energy blast for heavy combat situations.</p>
+                    </div>
+                    <div class="stat-panel">
+                        <div class="stat-header">
+                            <h3 class="stat-title">FLIGHT SYSTEMS</h3>
+                            <div class="stat-value">98%</div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" data-progress="98"></div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <p class="stat-desc">Jet boots and stabilizers enabling supersonic flight, atmospheric re-entry, and precise aerial maneuverability.</p>
+                    </div>
+                    <div class="stat-panel">
+                        <div class="stat-header">
+                            <h3 class="stat-title">AI ASSISTANT</h3>
+                            <div class="stat-value">100%</div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" data-progress="100"></div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <p class="stat-desc">J.A.R.V.I.S. and later F.R.I.D.A.Y. provide tactical analysis, suit diagnostics, and mission coordination.</p>
+                    </div>
+                </div>
+                <div class="power-visual">
+                    <div class="tech-helmet">
+                        <div class="helmet-display">
+                            <div class="hud-line hud-line-1"></div>
+                            <div class="hud-line hud-line-2"></div>
+                            <div class="hud-line hud-line-3"></div>
+                            <div class="hud-data">
+                                <div class="data-row">
+                                    <span class="data-label">SYSTEM STATUS</span>
+                                    <span class="data-value green">OPERATIONAL</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="data-label">POWER LEVEL</span>
+                                    <span class="data-value">98%</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="data-label">WEAPONS</span>
+                                    <span class="data-value green">ONLINE</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="data-label">FLIGHT SYSTEMS</span>
+                                    <span class="data-value green">ACTIVE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avengers Team -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04</span>
+                    AVENGERS TEAM
+                </h2>
+                <p class="section-subtitle">Earth's mightiest heroes</p>
+            </div>
+            <div class="team-cards">
+                <div class="team-card" data-character="captain">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image cap"></div>
+                            <div class="team-info">
+                                <h3 class="team-name">CAPTAIN AMERICA</h3>
+                                <div class="team-role">STRATEGIST</div>
+                            </div>
+                            <div class="team-glow"></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-specs-title">STEVE ROGERS</h3>
+                            <p class="team-bio">Enhanced human, master tactician, wielder of vibranium shield, moral compass of the Avengers.</p>
+                            <div class="team-stats">
+                                <div class="team-stat">
+                                    <span class="stat-name">STRENGTH</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-name">LEADERSHIP</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card" data-character="thor">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image thor"></div>
+                            <div class="team-info">
+                                <h3 class="team-name">THOR</h3>
+                                <div class="team-role">GOD OF THUNDER</div>
+                            </div>
+                            <div class="team-glow"></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-specs-title">THOR ODINSON</h3>
+                            <p class="team-bio">Asgardian god with control over lightning and weather, wielder of Mjolnir and Stormbreaker.</p>
+                            <div class="team-stats">
+                                <div class="team-stat">
+                                    <span class="stat-name">POWER</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-name">LONGEVITY</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card" data-character="hulk">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image hulk"></div>
+                            <div class="team-info">
+                                <h3 class="team-name">HULK</h3>
+                                <div class="team-role">STRONGEST AVENGER</div>
+                            </div>
+                            <div class="team-glow"></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-specs-title">BRUCE BANNER</h3>
+                            <p class="team-bio">Genius scientist who transforms into a raging green behemoth with near-limitless strength and durability.</p>
+                            <div class="team-stats">
+                                <div class="team-stat">
+                                    <span class="stat-name">STRENGTH</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-name">INTELLIGENCE</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card" data-character="widow">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-image widow"></div>
+                            <div class="team-info">
+                                <h3 class="team-name">BLACK WIDOW</h3>
+                                <div class="team-role">MASTER SPY</div>
+                            </div>
+                            <div class="team-glow"></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-specs-title">NATASHA ROMANOFF</h3>
+                            <p class="team-bio">Former Russian spy turned Avenger, expert martial artist, marksman, and intelligence operative.</p>
+                            <div class="team-stats">
+                                <div class="team-stat">
+                                    <span class="stat-name">AGILITY</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-name">STEALTH</span>
+                                    <div class="stat-bar-small">
+                                        <div class="stat-fill" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-glow"></div>
+                    <span class="footer-logo-text">STARK INDUSTRIES</span>
+                    <p class="footer-tagline">Building a better tomorrow, today.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title">ARMOR SYSTEMS</h4>
+                        <a href="#" class="footer-link">Mark Series</a>
+                        <a href="#" class="footer-link">Hulkbuster</a>
+                        <a href="#" class="footer-link">Nano-tech</a>
+                        <a href="#" class="footer-link">AI Assistants</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">TECHNOLOGIES</h4>
+                        <a href="#" class="footer-link">Arc Reactor</a>
+                        <a href="#" class="footer-link">Repulsor Tech</a>
+                        <a href="#" class="footer-link">Flight Systems</a>
+                        <a href="#" class="footer-link">Clean Energy</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">INITIATIVES</h4>
+                        <a href="#" class="footer-link">Avengers Program</a>
+                        <a href="#" class="footer-link">Stark Relief</a>
+                        <a href="#" class="footer-link">September Foundation</a>
+                        <a href="#" class="footer-link">Clean Earth</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4 class="social-title">CONNECT WITH STARK</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <div class="icon-glow"></div>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <div class="icon-glow"></div>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="icon-glow"></div>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <div class="icon-glow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 STARK INDUSTRIES. All rights reserved. "Iron Man" and related characters are trademarks of Marvel Comics.</p>
+                <p class="disclaimer">This is a fan-made website for educational purposes. Not affiliated with Marvel or Disney.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Suit Details Modal -->
+    <div class="modal" id="suitModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalSuitName">MARK I ARMOR</h2>
+                    <div class="modal-subtitle" id="modalSuitYear">2008 • ORIGINAL PROTOTYPE</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image" id="modalSuitImage"></div>
+                    <div class="modal-details">
+                        <h3 class="details-title">ARMOR SPECIFICATIONS</h3>
+                        <div class="details-grid">
+                            <div class="detail">
+                                <span class="detail-label">MATERIAL</span>
+                                <span class="detail-value" id="detailMaterial">Steel Alloy</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">POWER SOURCE</span>
+                                <span class="detail-value" id="detailPower">Arc Reactor V1.0</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">WEAPONS</span>
+                                <span class="detail-value" id="detailWeapons">Flamethrowers, Missiles</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">FLIGHT CAPABILITY</span>
+                                <span class="detail-value" id="detailFlight">Limited (Jet Boots)</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">AI SYSTEM</span>
+                                <span class="detail-value" id="detailAI">Basic Systems</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">CONSTRUCTION</span>
+                                <span class="detail-value" id="detailConstruction">Hand-built in cave</span>
+                            </div>
+                        </div>
+                        <div class="details-description" id="modalDescription">
+                            The Mark I was the first Iron Man suit, built by Tony Stark and Ho Yinsen while captive in a terrorist camp. Constructed from scrap metal and weapons parts, it was designed as a means of escape and laid the foundation for all future armor iterations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

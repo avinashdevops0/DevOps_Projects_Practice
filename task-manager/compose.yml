@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: task_manager
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_USER_PASSWORD}
+    volumes:
+      - mysql_vol:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - my-app
+  
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: mysql
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_USER_PASSWORD}
+      DB_NAME: task_manager
+      PORT: 3000
+    # ports:
+    #   - "3000:3000"  # Optional: expose backend to host
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      - my-app
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"  # Static site available at http://localhost
+    depends_on:
+      - backend
+    networks:
+      - my-app
+
+volumes:
+  mysql_vol:
+
+networks:
+  my-app:
+    driver: bridge

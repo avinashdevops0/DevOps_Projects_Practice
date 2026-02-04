@@ -1,7 +1,7 @@
 {
-  "name": "movie-tickets-backend",
+  "name": "task-manager-backend",
   "version": "1.0.0",
-  "description": "Movie Tickets Booking Backend",
+  "description": "Task Manager API with Node.js and MySQL",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,5 +12,8 @@
     "mysql2": "^3.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

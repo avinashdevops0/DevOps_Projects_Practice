@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THOR - God of Thunder | Asgardian Power</title>
+    <meta name="description" content="Cinematic experience of Thor, Norse God of Thunder. Explore his weapons, powers, and the realms of Asgard.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lightning-preloader"></div>
+        <div class="preloader-text">
+            <span class="rune">ᛏ</span>
+            <span class="rune">ᚺ</span>
+            <span class="rune">ᛟ</span>
+            <span class="rune">ᚱ</span>
+        </div>
+    </div>
+
+    <!-- Lightning Overlays -->
+    <div class="lightning-overlay"></div>
+    <div class="fog-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">
+                <span class="rune-logo">ᛏ</span>
+                <span class="logo-text">THOR</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link" data-text="HOME">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a></li>
+                <li><a href="#weapons" class="nav-link" data-text="WEAPONS">WEAPONS</a></li>
+                <li><a href="#powers" class="nav-link" data-text="POWERS">POWERS</a></li>
+                <li><a href="#realms" class="nav-link" data-text="REALMS">REALMS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="title-container">
+                <h1 class="main-title">
+                    <span class="title-line">THOR</span>
+                    <span class="title-line subtitle">GOD OF THUNDER</span>
+                </h1>
+                <div class="title-underline"></div>
+            </div>
+            
+            <p class="hero-tagline">Protector of Asgard • Son of Odin • Bringer of Storms</p>
+            
+            <button class="hero-cta" id="thunderBtn">
+                <span class="cta-text">SUMMON THUNDER</span>
+                <div class="cta-lightning"></div>
+            </button>
+        </div>
+        
+        <!-- Floating Mjolnir -->
+        <div class="floating-hammer" id="floatingHammer">
+            <div class="hammer-3d">
+                <div class="hammer-head"></div>
+                <div class="hammer-handle"></div>
+            </div>
+            <div class="hammer-glow"></div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title">THE GOD OF THUNDER</h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="about-container">
+            <div class="about-image-container">
+                <div class="image-frame">
+                    <div class="image-3d" id="aboutImage3D"></div>
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="glass-card">
+                    <h3 class="card-title">MIGHTY WARRIOR OF ASGARD</h3>
+                    <p class="card-text">
+                        Thor Odinson is the Norse God of Thunder, son of Odin, and rightful heir to the throne of Asgard. 
+                        Wielding the enchanted hammer Mjölnir, he commands the storm and protects the Nine Realms.
+                    </p>
+                    <p class="card-text">
+                        His strength knows no equal among the Æsir gods, capable of battling cosmic entities and 
+                        unleashing lightning that can shatter mountains. Thor's journey from arrogant prince to 
+                        worthy king is the stuff of legends.
+                    </p>
+                    
+                    <div class="myth-facts">
+                        <div class="fact-item">
+                            <span class="fact-icon">⚡</span>
+                            <span class="fact-text">God of Thunder & Lightning</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-icon">🛡️</span>
+                            <span class="fact-text">Protector of the Nine Realms</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-icon">👑</span>
+                            <span class="fact-text">Rightful King of Asgard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weapons Section -->
+    <section id="weapons" class="weapons-section">
+        <div class="section-header">
+            <h2 class="section-title">WEAPONS OF POWER</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Forged in the heart of a dying star</p>
+        </div>
+        
+        <!-- 3D Weapon Gallery -->
+        <div class="weapons-gallery">
+            <!-- Mjolnir Card -->
+            <div class="weapon-card" data-weapon="mjolnir">
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="weapon-image mjolnir-img"></div>
+                        <div class="weapon-name">MJÖLNIR</div>
+                        <div class="weapon-tag">Whosoever holds this hammer...</div>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="weapon-title">MJÖLNIR</h3>
+                        <div class="weapon-stats">
+                            <div class="stat">
+                                <span class="stat-label">POWER</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">ENCHANTMENT</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">DURABILITY</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="weapon-lore">
+                            Forged by dwarven blacksmiths Eitri, Brokk, and Buri in the heart of a dying star.
+                            Can only be lifted by those who are worthy.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Stormbreaker Card -->
+            <div class="weapon-card" data-weapon="stormbreaker">
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="weapon-image stormbreaker-img"></div>
+                        <div class="weapon-name">STORMBREAKER</div>
+                        <div class="weapon-tag">King's Weapon</div>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="weapon-title">STORMBREAKER</h3>
+                        <div class="weapon-stats">
+                            <div class="stat">
+                                <span class="stat-label">POWER</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">BIFRÖST</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">CONTROL</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="weapon-lore">
+                            Created to replace Mjölnir, Stormbreaker grants Thor the power to summon the Bifröst
+                            and commands even greater storms than its predecessor.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Broken Mjolnir Card -->
+            <div class="weapon-card" data-weapon="broken">
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="weapon-image broken-img"></div>
+                        <div class="weapon-name">MJÖLNIR SHATTERED</div>
+                        <div class="weapon-tag">Hela's Destruction</div>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="weapon-title">BROKEN MJÖLNIR</h3>
+                        <div class="weapon-stats">
+                            <div class="stat">
+                                <span class="stat-label">POWER</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">ENCHANTMENT</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">MEMORY</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="weapon-lore">
+                            Shattered by Hela, Goddess of Death, proving that no enchantment is absolute.
+                            This event marked Thor's greatest loss and his journey to become more than the hammer.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powers Section -->
+    <section id="powers" class="powers-section">
+        <div class="section-header">
+            <h2 class="section-title">DIVINE POWERS</h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="powers-container">
+            <div class="power-card">
+                <div class="power-icon">
+                    <i class="fas fa-bolt"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3 class="power-title">THUNDER & LIGHTNING</h3>
+                <div class="power-meter">
+                    <div class="meter-fill" style="width: 100%">
+                        <div class="meter-lightning"></div>
+                    </div>
+                </div>
+                <p class="power-desc">
+                    Commands storms, summons lightning, and controls weather across the Nine Realms.
+                </p>
+            </div>
+            
+            <div class="power-card">
+                <div class="power-icon">
+                    <i class="fas fa-fist-raised"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3 class="power-title">GODLY STRENGTH</h3>
+                <div class="power-meter">
+                    <div class="meter-fill" style="width: 98%">
+                        <div class="meter-pulse"></div>
+                    </div>
+                </div>
+                <p class="power-desc">
+                    Can lift mountains, battle cosmic beings, and withstand forces that would shatter planets.
+                </p>
+            </div>
+            
+            <div class="power-card">
+                <div class="power-icon">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3 class="power-title">INVULNERABILITY</h3>
+                <div class="power-meter">
+                    <div class="meter-fill" style="width: 95%">
+                        <div class="meter-shield"></div>
+                    </div>
+                </div>
+                <p class="power-desc">
+                    Nearly indestructible body that can survive in space and withstand supernovae.
+                </p>
+            </div>
+            
+            <div class="power-card">
+                <div class="power-icon">
+                    <i class="fas fa-crown"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3 class="power-title">ODINFORCE</h3>
+                <div class="power-meter">
+                    <div class="meter-fill" style="width: 90%">
+                        <div class="meter-odin"></div>
+                    </div>
+                </div>
+                <p class="power-desc">
+                    Cosmic energy inherited from Odin All-Father, granting reality-warping abilities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realms Section -->
+    <section id="realms" class="realms-section">
+        <div class="realms-background"></div>
+        <div class="section-header">
+            <h2 class="section-title">THE NINE REALMS</h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="realms-container">
+            <div class="realm-card" data-realm="asgard">
+                <div class="realm-icon">🕌</div>
+                <h3 class="realm-title">ASGARD</h3>
+                <p class="realm-desc">Golden realm of the Æsir gods, Thor's home</p>
+                <div class="realm-glow"></div>
+            </div>
+            
+            <div class="realm-card" data-realm="midgard">
+                <div class="realm-icon">🌍</div>
+                <h3 class="realm-title">MIDGARD</h3>
+                <p class="realm-desc">Earth, protected by Thor for millennia</p>
+                <div class="realm-glow"></div>
+            </div>
+            
+            <div class="realm-card" data-realm="jotunheim">
+                <div class="realm-icon">🏔️</div>
+                <h3 class="realm-title">JOTUNHEIM</h3>
+                <p class="realm-desc">Frost Giant realm, Thor's sworn enemies</p>
+                <div class="realm-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mythic-footer">
+        <div class="footer-content">
+            <div class="footer-runes">
+                <span class="footer-rune">ᛏ</span>
+                <span class="footer-rune">ᚺ</span>
+                <span class="footer-rune">ᛟ</span>
+                <span class="footer-rune">ᚱ</span>
+            </div>
+            
+            <p class="footer-text">
+                THOR ODINSON • PROTECTOR OF THE NINE REALMS • GOD OF THUNDER
+            </p>
+            
+            <div class="footer-links">
+                <a href="#hero" class="footer-link">ASCEND</a>
+                <span class="footer-divider">|</span>
+                <a href="#weapons" class="footer-link">WEAPONS</a>
+                <span class="footer-divider">|</span>
+                <a href="#powers" class="footer-link">POWERS</a>
+            </div>
+            
+            <p class="footer-credit">
+                Forged in the heart of a dying star • 2024
+            </p>
+        </div>
+    </footer>
+
+    <!-- Weapon Modal -->
+    <div class="weapon-modal" id="weaponModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-weapon" id="modalWeapon"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title" id="modalTitle">MJÖLNIR</h2>
+                    <div class="modal-stats" id="modalStats"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

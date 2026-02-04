@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers 3D Gallery | Earth's Mightiest Heroes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦸</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="avengers-logo">
+                    <div class="avengers-a">A</div>
+                </div>
+                <h1>AVENGERS</h1>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Assembling Earth's Mightiest Heroes...</p>
+        </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="particles"></div>
+        <div class="energy-lines"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">A</div>
+                <h1>AVENGERS <span>GALLERY</span></h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-filter="all">All Heroes</a></li>
+                    <li><a href="#" class="nav-link" data-filter="original">Original</a></li>
+                    <li><a href="#" class="nav-link" data-filter="new">New Avengers</a></li>
+                    <li><a href="#" class="nav-link" data-filter="villains">Villains</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-controls">
+                <button class="view-toggle" id="toggle3D">
+                    <i class="fas fa-cube"></i> 3D View
+                </button>
+                <button class="sound-toggle" id="toggleSound">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Intro Section -->
+            <section class="intro-section">
+                <div class="intro-text">
+                    <h2>EARTH'S MIGHTIEST <span class="highlight">HEROES</span></h2>
+                    <p>Explore the complete collection of Avengers in stunning 3D. Click on any hero to discover their powers, biography, and cinematic journey.</p>
+                </div>
+                <div class="intro-stats">
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Heroes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Sagas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Movies</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="gallery-section">
+                <div class="gallery-controls">
+                    <div class="view-options">
+                        <button class="view-option active" data-view="grid">
+                            <i class="fas fa-th"></i> Grid
+                        </button>
+                        <button class="view-option" data-view="carousel">
+                            <i class="fas fa-images"></i> Carousel
+                        </button>
+                        <button class="view-option" data-view="3d">
+                            <i class="fas fa-cube"></i> 3D Cube
+                        </button>
+                    </div>
+                    
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search Avengers...">
+                    </div>
+                </div>
+
+                <!-- 3D Gallery Container -->
+                <div class="gallery-3d-container" id="gallery3D">
+                    <div class="gallery-3d-scene">
+                        <!-- 3D items will be dynamically added here -->
+                    </div>
+                    <div class="gallery-3d-controls">
+                        <button class="3d-control prev-3d">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="3d-control next-3d">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="3d-control rotate-3d">
+                            <i class="fas fa-sync-alt"></i> Rotate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid Gallery Container -->
+                <div class="gallery-grid-container active" id="galleryGrid">
+                    <div class="gallery-grid">
+                        <!-- Grid items will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Carousel Gallery Container -->
+                <div class="gallery-carousel-container" id="galleryCarousel">
+                    <div class="carousel-track">
+                        <!-- Carousel items will be dynamically added here -->
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Details Modal -->
+            <div class="hero-modal" id="heroModal">
+                <div class="modal-content">
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-body">
+                        <div class="modal-hero-image">
+                            <div class="modal-image-container">
+                                <!-- Hero image will be dynamically added here -->
+                            </div>
+                            <div class="hero-badge" id="heroBadge">
+                                <!-- Badge will be dynamically added here -->
+                            </div>
+                        </div>
+                        <div class="modal-hero-info">
+                            <h2 id="modalHeroName">Hero Name</h2>
+                            <div class="hero-alias" id="modalHeroAlias">Alias</div>
+                            <div class="hero-meta">
+                                <span class="meta-item" id="modalHeroMovie">Movie</span>
+                                <span class="meta-item" id="modalHeroActor">Actor</span>
+                            </div>
+                            <p class="hero-description" id="modalHeroDescription">Description</p>
+                            
+                            <div class="hero-stats">
+                                <h3>Power Stats</h3>
+                                <div class="stats-bars">
+                                    <!-- Stats bars will be dynamically added here -->
+                                </div>
+                            </div>
+                            
+                            <div class="hero-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p id="modalHeroQuote">Quote</p>
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            
+                            <div class="hero-actions">
+                                <button class="action-btn favorite-btn">
+                                    <i class="far fa-heart"></i> Favorite
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">A</div>
+                    <h3>AVENGERS GALLERY</h3>
+                    <p>Earth's Mightiest Heroes in 3D</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">MCU Timeline</a></li>
+                        <li><a href="#">Character Bios</a></li>
+                        <li><a href="#">Infinity Saga</a></li>
+                        <li><a href="#">Multiverse Saga</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Avengers 3D Gallery. All character rights belong to Marvel Studios.</p>
+                <p>Created with <i class="fas fa-heart" style="color: var(--iron-man);"></i> for Avengers fans worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio for effects -->
+    <audio id="heroSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-positive-notification-905.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-epic-cinematic-trailer-849.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script0.js"></script>
+</body>
+</html>
